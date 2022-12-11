@@ -3,6 +3,9 @@
 using namespace std;
 #include "HealthChecker.h"
 
+// 標準BMIを表すメンバ定数の実体
+const int HealthChecker::STD_BMI = 22;
+
 // BMIを返すメンバ関数の実装
 double HealthChecker::getBmi()
 {
@@ -16,10 +19,23 @@ double HealthChecker::getBmi()
     return this->bmi;
 }
 
-// 名前を返すメンバ変数の実装
+// 名前を返すメンバ関数の実装
 string HealthChecker::getName()
 {
     return this->name;
+}
+
+// 標準BMIを返すメンバ関数の実装
+int HealthChecker::getStdBmi()
+{
+    return HealthChecker::STD_BMI;
+}
+
+// 標準体重を返すメンバ関数の実装
+double HealthChecker::getStdWeight()
+{
+    double mHeight = this->height / 100;
+    return HealthChecker::STD_BMI * mHeight * mHeight;
 }
 
 // コンストラクタの実装
