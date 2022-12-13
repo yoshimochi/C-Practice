@@ -10,8 +10,7 @@ int main()
 
     cout << "口座番号：" << act.getNumber();
     cout << "口座名義人：" << act.getName();
-    cout << "残高：" << act.getBalance();
-    << endl;
+    cout << "残高：" << act.getBalance() << endl;
 
     return 0;
 }
